@@ -43,3 +43,6 @@ android {
 flutter {
     source = "../.."
 }
+dependencies {
+    implementation ("com.google.firebase:firebase-bom:31.2.0");
+}
