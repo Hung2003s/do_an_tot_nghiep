@@ -36,7 +36,7 @@ class ItemDetailAnotomy extends StatelessWidget {
           color: OneColors.xam,
           boxShadow: [
             BoxShadow(
-              color: OneColors.boxshadow.withOpacity(0.3),
+              color: OneColors.boxshadow..withValues(alpha: 0.3),
               offset: Offset(0, 5),
               blurRadius: 8,
               spreadRadius: 0,

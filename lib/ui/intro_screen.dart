@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:lottie/lottie.dart';
-
 import '../const/app_scaffold.dart';
 import '../const/ar_color.dart';
 import '../const/ar_image.dart';
 import '../const/ar_theme.dart';
+import '../home/app_router.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -38,7 +37,7 @@ class _IntroScreenState extends State<IntroScreen> {
               if (value == 2) {
                 Future.delayed(const Duration(seconds: 2), (() {
                   setState(() {
-                     //Get.toNamed(AppRoute.homeTab.name);
+                    Get.toNamed(AppRoute.homeTab.name);
                   });
                 }));
               }
@@ -79,21 +78,21 @@ class _IntroScreenState extends State<IntroScreen> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(height: 30),
                   Image.asset(
                     ArImages.intro_2,
                     fit: BoxFit.contain,
                     height: MediaQuery.of(context).size.height * 0.45,
-                  )
+                  ),
                 ],
               ),
               Column(
                 children: [
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 30),
+                    padding: EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
                       'Hỗ trợ hiển thị mô hình 3D trên mặt phẳng',
-                      style:  OneTheme.of(context).body1.copyWith(fontSize: 28),
+                      style: OneTheme.of(context).body1.copyWith(fontSize: 28),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -104,10 +103,10 @@ class _IntroScreenState extends State<IntroScreen> {
                     height: MediaQuery.of(context).size.height * 0.45,
                   ),
                 ],
-              )
+              ),
             ],
           ),
-          SizedBox(height: 25,),
+          SizedBox(height: 25),
           Text(
             'Xin chào',
             style: OneTheme.of(context).body1.copyWith(fontSize: 28),

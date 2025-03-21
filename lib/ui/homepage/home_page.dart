@@ -8,6 +8,7 @@ import '../../const/ar_theme.dart';
 import '../../const/sliver_app_bar_delegate.dart';
 import '../../fire_base/fire_base.dart';
 import '../../home/app_router.dart';
+import '../tips/tips_screen.dart';
 import 'item_search_home_page.dart';
 
 class HomePageScreen extends StatefulWidget {
@@ -93,9 +94,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 _buildHeader(),
                 if (!isListFilterEmty) ...[
                   SliverToBoxAdapter(child: _buildCategory()),
-                  SliverToBoxAdapter(child: _buildExtend())
+                  SliverToBoxAdapter(child: _buildExtend()),
                 ] else ...[
-                  SliverToBoxAdapter(child: _buildListSearch())
+                  SliverToBoxAdapter(child: _buildListSearch()),
                 ],
               ],
             ),
@@ -136,10 +137,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                // SvgPicture.asset(
-                //   ArImages.ic_menu,
-                //   color: OneColors.white,
-                // ),
+                SvgPicture.asset(ArImages.ic_menu, color: OneColors.white),
                 Text(
                   'Khám phá cơ thể con người',
                   style: OneTheme.of(
@@ -166,7 +164,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: OneColors.shadow.withOpacity(0.2),
+                    color: OneColors.shadow..withValues(alpha: 0.2),
                     blurRadius: 20.0,
                   ),
                 ],
@@ -351,8 +349,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return Container();
-                    //const TipsScreen(id: 1);
+                    return const TipsScreen(id: 1);
                   },
                 ),
               );
@@ -361,12 +358,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: const Color.fromARGB(
-                  255,
-                  151,
-                  184,
-                  255,
-                ).withOpacity(0.2),
+                color: const Color.fromARGB(255, 151, 184, 255)
+                  ..withValues(alpha: 0.2),
               ),
               child: Row(
                 children: [
@@ -411,8 +404,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return Container();
-                    //const TipsScreen(id: 2);
+                    return const TipsScreen(id: 2);
                   },
                 ),
               );
@@ -421,12 +413,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: const Color.fromARGB(
-                  255,
-                  253,
-                  216,
-                  115,
-                ).withOpacity(0.2),
+                color: const Color.fromARGB(255, 253, 216, 115)
+                  ..withValues(alpha: 0.2),
               ),
               child: Row(
                 children: [

@@ -30,7 +30,7 @@ class Item extends StatelessWidget {
           color: OneColors.white,
           boxShadow: [
             BoxShadow(
-              color: OneColors.shadow.withOpacity(0.2),
+              color: OneColors.shadow..withValues(alpha: 0.2),
               blurRadius: 20.0,
             ),
           ],

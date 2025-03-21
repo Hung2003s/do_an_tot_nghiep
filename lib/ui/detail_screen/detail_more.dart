@@ -132,7 +132,7 @@ class _DetailMoreScreenState extends State<DetailMoreScreen> {
             height: 200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: OneColors.grey.withOpacity(0.3),
+              color: OneColors.grey..withValues(alpha: 0.3),
             ),
             child: Center(
               child: CachedImage(

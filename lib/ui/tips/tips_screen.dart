@@ -1,6 +1,5 @@
 import 'package:do_an_tot_nghiep/ui/tips/tips_item.dart';
 import 'package:flutter/material.dart';
-
 import '../../const/app_scaffold.dart';
 import '../../const/ar_color.dart';
 import '../../const/ar_theme.dart';

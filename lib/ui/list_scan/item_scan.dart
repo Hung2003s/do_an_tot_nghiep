@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:native_ar_viewer/native_ar_viewer.dart';
+//import 'package:native_ar_viewer/native_ar_viewer.dart';
 import 'dart:io' as io;
 
 import '../../cache_image/cache_image.dart';
@@ -21,7 +21,7 @@ class ItemScanAr extends StatefulWidget {
 class _ItemScanArState extends State<ItemScanAr> {
   _launchAR(String model3DUrl) async {
     if (io.Platform.isAndroid) {
-      await NativeArViewer.launchAR(model3DUrl);
+      //await NativeArViewer.launchAR(model3DUrl);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Platform not supported')));
     }

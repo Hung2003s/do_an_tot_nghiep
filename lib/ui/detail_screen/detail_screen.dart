@@ -11,6 +11,7 @@ import '../../const/constant.dart';
 import '../../const/sliver_app_bar_delegate.dart';
 import '../../home/app_router.dart';
 import '../detail_item/item_list.dart';
+import '../list_scan/show_3d_image.dart';
 import 'detail_more.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -187,8 +188,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   MaterialPageRoute(
                     builder: (context) {
                       // do something
-                      return Container();
-                      //ShowImage3DScreen(image3d: _getImage3D());
+                      return ShowImage3DScreen(image3d: _getImage3D());
                     },
                   ),
                 );

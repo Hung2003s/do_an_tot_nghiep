@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 // ignore: no_leading_underscores_for_library_prefixes
 import 'package:get/get.dart';
 import '../const/constant.dart';
+import '../ui/detail_item/anatomy_detail_screen.dart';
 import '../ui/detail_screen/detail_screen.dart';
 import '../ui/homepage/home_page.dart';
 import '../ui/intro_screen.dart';
+import 'home_tab.dart';
 import 'page_material_route.dart';
 
 enum AppRoute {
@@ -70,18 +72,18 @@ extension AppRouteExt on AppRoute {
           settings: settings,
           page: () => const HomePageScreen(),
         );
-      // case AppRoute.homeTab:
-      //   return PageMaterialRoute(
-      //     settings: settings,
-      //     page: () => const HomeTabs(),
-      //   );
-      // case AppRoute.anatomyDetailScreen:
-      //   final dynamic argument = settings.arguments;
-      //   final dynamic id = argument[0];
-      //   return PageMaterialRoute(
-      //     settings: settings,
-      //     page: () => AnotomyDetailScreen(id: id),
-      //   );
+      case AppRoute.homeTab:
+        return PageMaterialRoute(
+          settings: settings,
+          page: () => const HomeTabs(),
+        );
+      case AppRoute.anatomyDetailScreen:
+        final dynamic argument = settings.arguments;
+        final dynamic id = argument[0];
+        return PageMaterialRoute(
+          settings: settings,
+          page: () => AnotomyDetailScreen(id: id),
+        );
 
       default:
         return GetPageRoute(

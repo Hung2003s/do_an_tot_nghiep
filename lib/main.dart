@@ -7,7 +7,7 @@ import 'home/app_router.dart';
 RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+   Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -35,3 +35,4 @@ class AppBinding extends Bindings {
   @override
   void dependencies() {}
 }
+
